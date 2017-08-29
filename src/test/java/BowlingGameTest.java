@@ -38,14 +38,23 @@ public class BowlingGameTest {
 		assertEquals("should be one score", 20, score);
 		
 }
-//	@Test
-//	public void shouldScoreOneSpare(){
-//		g.roll(5);
-//		g.roll(5);
-//		g.roll(3);
-//		rollMany(17,0);
-//		int score = g.score();
-//		assertThat(score, CoreMatchers.is(16));
-//	}
+	@Test
+	public void shouldScoreOneSpare(){
+		g.roll(5);
+		g.roll(5);
+		g.roll(3);
+		rollMany(17,0);
+		int score = g.score();
+		assertThat(score, CoreMatchers.is(16));
+	}
+	
+	@Test
+	public void shouldScoreOneStrike(){
+		g.roll(10);
+		g.roll(4);
+		g.roll(3);
+		int score = g.score();
+		assertThat(score, CoreMatchers.is(24));
+	}
 }
 
