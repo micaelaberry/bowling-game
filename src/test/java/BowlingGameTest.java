@@ -35,7 +35,7 @@ public class BowlingGameTest {
 	public void shouldScoreAllOnes() {
 		rollMany(20,1);
 		int score = g.score();
-		assertEquals("should be one score", 0, score); 
+		assertEquals("should be one score", 20, score);
 		
 }
 //	@Test
