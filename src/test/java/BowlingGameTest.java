@@ -1,3 +1,5 @@
+package src.test.java;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
@@ -56,5 +58,12 @@ public class BowlingGameTest {
 		g.roll(3);
 		int score = g.score();
 		assertThat(score, is(24));
+	}
+	
+	@Test
+	public void shouldScoreAPerfectGame() {
+		rollMany(12, 10);
+		int score = g.score();
+		assertThat(score, is(300));
 	}
 }
